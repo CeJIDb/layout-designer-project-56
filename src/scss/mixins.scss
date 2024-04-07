@@ -9,3 +9,7 @@
   justify-content: $jc;
   align-items: $ai;
 }
+
+@mixin test-border {
+  border: 1px solid red;
+}
