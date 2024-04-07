@@ -15,6 +15,17 @@ html {
   background-color: #08020d;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  background-color: #08020d;
+}
+
 h1,
 h2,
 h3,
@@ -84,6 +95,21 @@ h4 {
   text-transform: uppercase;
 }
 
+.content {
+  width: 1200px;
+  border: 1px solid red;
+}
+
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 @media (width <= 414) {
   h1 {
     font-size: 30px;
@@ -101,6 +127,72 @@ h4 {
     font-size: 18px;
     line-height: 24px;
   }
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/banner.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.header {
+  position: absolute;
+  top: 25px;
+}
+.header .navigation-panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header .logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 90px;
+}
+.header .logo-img {
+  margin-right: 16px;
+}
+.header a {
+  display: block;
+  font-size: 11px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.header .navigation {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 24px;
+  list-style: none;
+}
+.header .search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: stretch;
+  flex: 1 0 0;
+}
+.header .search {
+  box-sizing: border-box;
+  height: 25px;
+  width: 248px;
+  padding: 5px 10px;
+  color: inherit;
+  border: none;
+  border-radius: 50px;
+  background-color: #3c3b3d;
 }
 
 /*# sourceMappingURL=app.css.map */

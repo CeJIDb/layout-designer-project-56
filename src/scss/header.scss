@@ -1,0 +1,66 @@
+header {
+  @include flex(column, flex-start, center);
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url("../images/banner.png");
+  background-position: center;
+  background-size: cover;
+
+}
+
+.header {
+  position: absolute;
+  top: 25px;
+
+  .navigation-panel {
+    @include flex(row, flex-start, center);
+  }
+
+  .logo {
+    @include flex(row, flex-start, center);
+    margin-right: 90px;
+  }
+
+  .logo-img {
+    margin-right: 16px;
+  }
+
+  a {
+    display: block;
+
+    font-size: 11px;
+    color: $white;
+
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .navigation {
+    @include reset;
+    @include flex(row, flex-start);
+
+    gap: 24px;
+
+    list-style: none;
+  }
+
+  .search-form {
+    @include flex(row, flex-end);
+
+    flex: 1 0 0;
+  }
+
+  .search {
+    box-sizing: border-box;
+    height: 25px;
+    width: 248px;
+    padding: 5px 10px;
+
+    color: inherit;
+
+    border: none;
+    border-radius: 50px;
+    background-color: $dark;
+  }
+}

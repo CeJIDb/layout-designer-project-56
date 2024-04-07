@@ -20,6 +20,7 @@ html {
 
 body {
   @include flex(column, flex-start, center);
+  @include reset;
 
   width: 100vw;
 
