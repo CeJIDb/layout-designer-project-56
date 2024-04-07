@@ -19,8 +19,11 @@ html {
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4 {
   font-weight: bold;
+  color: $white;
   text-transform: uppercase;
 }
 
@@ -34,6 +37,65 @@ h2 {
   line-height: 57px;
 }
 
+h3 {
+  font-size: 24px;
+  line-height: 47px;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.text {
+  &-small {
+    font-size: 12.8px;
+  }
+
+  &-size-1 {
+    font-size: 16px;
+  }
+
+  &-size-2 {
+    font-size: 24px;
+  }
+
+  &-size-3 {
+    font-size: 32px;
+  }
+
+  &-size-4 {
+    font-size: 40px;
+  }
+
+  &-size-5 {
+    font-size: 48px;
+  }
+
+  &-size-6 {
+    font-size: 56px;
+  }
+
+  &-size-7 {
+    font-size: 64px;
+  }
+}
+
+.pop-track {
+  font-size: 12.8px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 @media (width <= 414) {
   h1 {
     font-size: 30px;
@@ -43,5 +105,15 @@ h2 {
   h2 {
     font-size: 18px;
     line-height: 27px;
+  }
+
+  h3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  h4 {
+    font-size: 18px;
+    line-height: 24px;
   }
 }
