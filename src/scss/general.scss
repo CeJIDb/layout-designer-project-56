@@ -106,22 +106,18 @@ h4 {
 
 .content {
   width: 1200px;
+
+  @include test-border;
 }
 
-.d-flex {
-  display: flex;
-}
-
-.fd-column {
-  flex-direction: column;
-}
-
-.jc-center {
-  justify-content: center;
-}
-
-.ai-center {
-  align-items: center;
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 @media (width <= 414) {
