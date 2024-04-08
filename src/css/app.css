@@ -110,7 +110,7 @@ h4 {
   width: 1px;
 }
 
-@media (width <= 414) {
+@media (width <= 414px) {
   h1 {
     font-size: 30px;
     line-height: 45px;
@@ -126,6 +126,10 @@ h4 {
   h4 {
     font-size: 18px;
     line-height: 24px;
+  }
+  .content {
+    width: 100%;
+    margin: 0 20px;
   }
 }
 header {
@@ -143,12 +147,19 @@ header {
 .header {
   color: #fff;
 }
+.header .content {
+  position: relative;
+}
 .header .navigation-panel {
-  margin-top: 25px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
   border: 1px solid red;
 }
 .header .logo {
@@ -175,6 +186,7 @@ header {
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
+  flex-wrap: wrap;
   gap: 24px;
   list-style: none;
 }
@@ -201,6 +213,7 @@ header {
   justify-content: flex-start;
   align-items: center;
   margin: 200px 0;
+  text-align: center;
   border: 1px solid red;
 }
 .header h1 {
@@ -245,6 +258,28 @@ header {
   border-radius: 5px;
   background-color: #34c176;
   cursor: pointer;
+}
+
+@media (width <= 414px) {
+  .header .navigation-panel {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .header .navigation {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .header .search-form {
+    width: 100%;
+  }
+  .header .search {
+    width: 100%;
+  }
+  .header .page-description {
+    margin-top: 250px;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

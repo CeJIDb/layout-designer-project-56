@@ -11,13 +11,20 @@ header {
 }
 
 .header {
-
   color: $white;
 
+  .content {
+    position: relative;
+  }
+
   .navigation-panel {
-    margin-top: 25px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    right: 0;
 
     @include flex(row, flex-start, center);
+    flex-wrap: wrap;
     @include test-border;
   }
 
@@ -43,7 +50,8 @@ header {
   .navigation {
     @include reset;
     @include flex(row, flex-start);
-
+    
+    flex-wrap: wrap;
     gap: 24px;
 
     list-style: none;
@@ -72,6 +80,8 @@ header {
     @include flex(column, flex-start, center);
 
     margin: 200px 0;
+    
+    text-align: center;
 
     @include test-border;
   }
@@ -128,6 +138,34 @@ header {
       background-color: $green;
 
       cursor: pointer;
+    }
+  }
+}
+
+@media (width <= 414px) {
+  .header {
+    .navigation-panel {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+    }
+
+    .navigation {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+    }
+
+    .search-form {
+      width: 100%;
+    }
+
+    .search {
+      width: 100%;
+    }
+
+    .page-description {
+      margin-top: 250px;
     }
   }
 }
