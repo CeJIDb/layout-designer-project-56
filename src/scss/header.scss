@@ -1,20 +1,24 @@
 header {
   @include flex(column, flex-start, center);
   width: 100vw;
-  height: 100vh;
 
   background-image: url("../images/banner.png");
   background-position: center;
   background-size: cover;
 
+  @include test-border;
+
 }
 
 .header {
-  position: absolute;
-  top: 25px;
+
+  color: $white;
 
   .navigation-panel {
+    margin-top: 25px;
+
     @include flex(row, flex-start, center);
+    @include test-border;
   }
 
   .logo {
@@ -30,7 +34,7 @@ header {
     display: block;
 
     font-size: 11px;
-    color: $white;
+    color: inherit;
 
     text-decoration: none;
     text-transform: uppercase;
@@ -62,5 +66,68 @@ header {
     border: none;
     border-radius: 50px;
     background-color: $dark;
+  }
+
+  .page-description {
+    @include flex(column, flex-start, center);
+
+    margin: 200px 0;
+
+    @include test-border;
+  }
+
+  h1 {
+    @include reset;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  .access-form {
+    @include flex(row, space-between, center);
+    flex-wrap: wrap;
+    flex: 1 1 0;
+    column-gap: 24px;
+
+    max-width: 570px;
+
+    @include test-border;
+
+    input {
+      flex: 1 1 270px;
+
+      box-sizing: border-box;
+
+      min-height: 50px;
+      padding-left: 20px;
+      margin-bottom: 1.5rem;
+
+      color: inherit;
+      border-radius: 3px;
+      border: 2px solid $dark-gray;
+
+      background-color: transparent;
+    }
+
+    input::placeholder {
+      color: inherit;
+    }
+
+    .submit-btn {
+      flex: 1 0 100%;
+
+      padding: 20px 30px;
+
+      color: inherit;
+      font-size: 13.3px;
+      text-transform: uppercase;
+
+      border: none;
+      border-radius: 5px;
+      background-color: $green;
+
+      cursor: pointer;
+    }
   }
 }

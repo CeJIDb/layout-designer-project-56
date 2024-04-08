@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="./css/app.css">
 </head>
 <body>
-  <header>
-    <section class="header content">
+  <header class="header">
+    <section class="content">
       <section class="navigation-panel">
         <a class="logo" href="#page-description">
           <img class="logo-img" width="24" height="24" src="./images/logo.svg" alt="Логотип">
@@ -26,6 +26,18 @@
         <form action="#" class="search-form">
           <label for="search" class="sr-only">Поиск</label>
           <input id="search" class="search" type="text" placeholder="ПОИСК...">
+        </form>
+      </section>
+      <section id="page-description" class="page-description">
+        <h1>Онлайн музыка где угодно</h1>
+        <h2>без ограничений</h2>
+        <p class="text-size-1">Получите доступ всего за несколько шагов. Заполните форму ниже и откройте мир музыки</p>
+        <form action="#" class="access-form">
+          <label for="name" class="sr-only">Имя</label>
+          <label for="email" class="sr-only">Email</label>
+          <input id="name" type="text" placeholder="Имя">
+          <input id="email" type="email" placeholder="Email">
+          <button type="submit" class="btn submit-btn">Получить доступ</button>
         </form>
       </section>
     </section>

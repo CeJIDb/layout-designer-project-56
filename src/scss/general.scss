@@ -13,7 +13,7 @@
 html {
   font-family: Roboto, sans-serif;
   line-height: 1.5;
-  color: #cacaca;
+  color: $dark-gray;
 
   background-color: #08020d;
 }
@@ -70,32 +70,12 @@ h4 {
     font-size: 12.8px;
   }
 
-  &-size-1 {
-    font-size: 16px;
-  }
+  $fz-list: 16px, 24px, 32px, 40px, 48px, 56px, 64px;
 
-  &-size-2 {
-    font-size: 24px;
-  }
-
-  &-size-3 {
-    font-size: 32px;
-  }
-
-  &-size-4 {
-    font-size: 40px;
-  }
-
-  &-size-5 {
-    font-size: 48px;
-  }
-
-  &-size-6 {
-    font-size: 56px;
-  }
-
-  &-size-7 {
-    font-size: 64px;
+  @for $i from 1 through 7 {
+    &-size-#{$i} {
+      font-size: nth($fz-list, $i);
+    }
   }
 }
 
