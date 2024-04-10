@@ -101,14 +101,14 @@ h4 {
 }
 
 .btn {
-  flex: 1 0 100%;
-  
+  box-sizing: border-box;
   display: block;
   padding: 20px 30px;
-
+  
   color: inherit;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
 
   border: 1px solid $white;
   border-radius: 5px;
