@@ -27,6 +27,10 @@ body {
   background-color: $black;
 }
 
+main {
+  width: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -123,7 +127,9 @@ h4 {
   }
 
   .content {
+    box-sizing: border-box;
+
     width: 100%;
-    margin: 0 20px;
+    padding: 0 20px;
   }
 }
