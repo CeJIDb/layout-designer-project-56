@@ -73,6 +73,9 @@
 @media (width <= 414px) {
   .header {
     .navigation-panel {
+      left: 20px;
+      right: -20px;
+
       flex-direction: column;
       align-items: flex-start;
       gap: 18px;
