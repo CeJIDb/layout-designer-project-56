@@ -4,8 +4,6 @@
   width: 100%;
 
   background-image: url('../images/banner.png');
-  background-position: center;
-  background-size: cover;
 
   .content {
     @include flex(column, flex-start, center);

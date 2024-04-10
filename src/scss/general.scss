@@ -95,6 +95,11 @@ h4 {
   @include test-border;
 }
 
+.bg {
+  background-position: center;
+  background-size: cover;
+}
+
 .btn {
   flex: 1 0 100%;
   
