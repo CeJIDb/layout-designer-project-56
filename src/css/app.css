@@ -110,12 +110,13 @@ h4 {
 }
 
 .btn {
-  flex: 1 0 100%;
+  box-sizing: border-box;
   display: block;
   padding: 20px 30px;
   color: inherit;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
   border: 1px solid #fff;
   border-radius: 5px;
   cursor: pointer;
@@ -290,6 +291,8 @@ h4 {
   color: inherit;
 }
 .page-description .access-form .submit-btn {
+  width: 100%;
+  padding: 20px 30px;
   font-size: 13.3px;
   color: #fff;
   border: none;
@@ -364,6 +367,69 @@ h4 {
 }
 .page-pricing .footer {
   margin-top: 40px;
+}
+
+.page-news {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 100px;
+}
+.page-news .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.page-news .news-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 50px;
+  width: 100%;
+  margin-bottom: 65px;
+}
+.page-news .news-item:nth-of-type(2n) {
+  flex-direction: row-reverse;
+}
+.page-news .news-item:last-of-type {
+  margin-bottom: 0;
+}
+.page-news .news-item h3 {
+  margin-top: 0;
+}
+.page-news .news-item .news-img {
+  display: block;
+  height: auto;
+}
+.page-news .news-item .news-footer {
+  font-size: 12px;
+}
+.page-news .news-item .news-author {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.page-news .news-item .news-author .author-name {
+  color: #F89202;
+}
+.page-news .news-item .btn {
+  width: 135px;
+  padding: 16px 30px;
+}
+
+@media (width <= 414px) {
+  .page-news .news-item {
+    flex-wrap: wrap;
+  }
+  .page-news .news-item .news-img {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
