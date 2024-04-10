@@ -132,20 +132,13 @@ h4 {
     margin: 0 20px;
   }
 }
-header {
+.header {
+  width: 100vw;
+  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 100vw;
-  background-image: url("../images/banner.png");
-  background-position: center;
-  background-size: cover;
-  border: 1px solid red;
-}
-
-.header {
-  color: #fff;
 }
 .header .content {
   position: relative;
@@ -159,8 +152,11 @@ header {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  flex-wrap: wrap;
-  border: 1px solid red;
+}
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 .header .logo {
   display: flex;
@@ -179,16 +175,13 @@ header {
   text-decoration: none;
   text-transform: uppercase;
 }
-.header .navigation {
-  margin: 0;
-  padding: 0;
+.header .navigation-menu {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
   flex-wrap: wrap;
   gap: 24px;
-  list-style: none;
 }
 .header .search-form {
   display: flex;
@@ -207,7 +200,25 @@ header {
   border-radius: 50px;
   background-color: #3c3b3d;
 }
-.header .page-description {
+
+@media (width <= 414px) {
+  .header .navigation-panel {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .header .navigation-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .header .search-form,
+  .header form,
+  .header .search {
+    width: 100%;
+  }
+}
+.page-description {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -216,14 +227,17 @@ header {
   text-align: center;
   border: 1px solid red;
 }
-.header h1 {
+
+h1 {
   margin: 0;
   padding: 0;
 }
-.header h2 {
+
+h2 {
   margin-top: 0;
 }
-.header .access-form {
+
+.access-form {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -234,7 +248,7 @@ header {
   max-width: 570px;
   border: 1px solid red;
 }
-.header .access-form input {
+.access-form input {
   flex: 1 1 270px;
   box-sizing: border-box;
   min-height: 50px;
@@ -245,10 +259,10 @@ header {
   border: 2px solid #cacaca;
   background-color: transparent;
 }
-.header .access-form input::placeholder {
+.access-form input::placeholder {
   color: inherit;
 }
-.header .access-form .submit-btn {
+.access-form .submit-btn {
   flex: 1 0 100%;
   padding: 20px 30px;
   color: inherit;
@@ -261,23 +275,7 @@ header {
 }
 
 @media (width <= 414px) {
-  .header .navigation-panel {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
-  }
-  .header .navigation {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-  }
-  .header .search-form {
-    width: 100%;
-  }
-  .header .search {
-    width: 100%;
-  }
-  .header .page-description {
+  .page-description {
     margin-top: 250px;
   }
 }

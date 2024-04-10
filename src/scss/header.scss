@@ -1,17 +1,9 @@
-header {
-  @include flex(column, flex-start, center);
+.header {
   width: 100vw;
 
-  background-image: url("../images/banner.png");
-  background-position: center;
-  background-size: cover;
-
-  @include test-border;
-
-}
-
-.header {
   color: $white;
+
+  @include flex(column, flex-start, center);
 
   .content {
     position: relative;
@@ -24,8 +16,12 @@ header {
     right: 0;
 
     @include flex(row, flex-start, center);
-    flex-wrap: wrap;
-    @include test-border;
+  }
+
+  ul {
+    @include reset;
+
+    list-style: none;
   }
 
   .logo {
@@ -47,14 +43,11 @@ header {
     text-transform: uppercase;
   }
 
-  .navigation {
-    @include reset;
+  .navigation-menu {
     @include flex(row, flex-start);
     
     flex-wrap: wrap;
     gap: 24px;
-
-    list-style: none;
   }
 
   .search-form {
@@ -75,71 +68,6 @@ header {
     border-radius: 50px;
     background-color: $dark;
   }
-
-  .page-description {
-    @include flex(column, flex-start, center);
-
-    margin: 200px 0;
-    
-    text-align: center;
-
-    @include test-border;
-  }
-
-  h1 {
-    @include reset;
-  }
-
-  h2 {
-    margin-top: 0;
-  }
-
-  .access-form {
-    @include flex(row, space-between, center);
-    flex-wrap: wrap;
-    flex: 1 1 0;
-    column-gap: 24px;
-
-    max-width: 570px;
-
-    @include test-border;
-
-    input {
-      flex: 1 1 270px;
-
-      box-sizing: border-box;
-
-      min-height: 50px;
-      padding-left: 20px;
-      margin-bottom: 1.5rem;
-
-      color: inherit;
-      border-radius: 3px;
-      border: 2px solid $dark-gray;
-
-      background-color: transparent;
-    }
-
-    input::placeholder {
-      color: inherit;
-    }
-
-    .submit-btn {
-      flex: 1 0 100%;
-
-      padding: 20px 30px;
-
-      color: inherit;
-      font-size: 13.3px;
-      text-transform: uppercase;
-
-      border: none;
-      border-radius: 5px;
-      background-color: $green;
-
-      cursor: pointer;
-    }
-  }
 }
 
 @media (width <= 414px) {
@@ -150,22 +78,16 @@ header {
       gap: 18px;
     }
 
-    .navigation {
+    .navigation-menu {
       flex-direction: column;
       align-items: flex-start;
       gap: 0;
     }
 
-    .search-form {
-      width: 100%;
-    }
-
+    .search-form,
+    form,
     .search {
       width: 100%;
-    }
-
-    .page-description {
-      margin-top: 250px;
     }
   }
 }
