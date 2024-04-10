@@ -53,19 +53,11 @@
     }
   
     .submit-btn {
-      flex: 1 0 100%;
-  
-      padding: 20px 30px;
-  
-      color: inherit;
       font-size: 13.3px;
-      text-transform: uppercase;
-  
+
+      color: $white;
       border: none;
-      border-radius: 5px;
       background-color: $green;
-  
-      cursor: pointer;
     }
   }
 }

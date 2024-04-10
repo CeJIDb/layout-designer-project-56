@@ -95,6 +95,21 @@ h4 {
   @include test-border;
 }
 
+.btn {
+  flex: 1 0 100%;
+  
+  padding: 20px 30px;
+
+  color: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  border: 1px solid $white;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
 .sr-only {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
