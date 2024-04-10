@@ -26,6 +26,10 @@ body {
   background-color: #08020d;
 }
 
+main {
+  width: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -128,8 +132,9 @@ h4 {
     line-height: 24px;
   }
   .content {
+    box-sizing: border-box;
     width: 100%;
-    margin: 0 20px;
+    padding: 0 20px;
   }
 }
 .header {
@@ -142,6 +147,7 @@ h4 {
 }
 .header .content {
   position: relative;
+  z-index: 10;
 }
 .header .navigation-panel {
   position: absolute;
@@ -203,6 +209,8 @@ h4 {
 
 @media (width <= 414px) {
   .header .navigation-panel {
+    left: 20px;
+    right: -20px;
     flex-direction: column;
     align-items: flex-start;
     gap: 18px;
@@ -219,25 +227,31 @@ h4 {
   }
 }
 .page-description {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.page-description .content {
+  position: relative;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   margin: 200px 0;
   text-align: center;
-  border: 1px solid red;
 }
-
-h1 {
+.page-description h1 {
   margin: 0;
   padding: 0;
 }
-
-h2 {
+.page-description h2 {
   margin-top: 0;
 }
-
-.access-form {
+.page-description .access-form {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -246,9 +260,8 @@ h2 {
   flex: 1 1 0;
   column-gap: 24px;
   max-width: 570px;
-  border: 1px solid red;
 }
-.access-form input {
+.page-description .access-form input {
   flex: 1 1 270px;
   box-sizing: border-box;
   min-height: 50px;
@@ -259,10 +272,10 @@ h2 {
   border: 2px solid #cacaca;
   background-color: transparent;
 }
-.access-form input::placeholder {
+.page-description .access-form input::placeholder {
   color: inherit;
 }
-.access-form .submit-btn {
+.page-description .access-form .submit-btn {
   flex: 1 0 100%;
   padding: 20px 30px;
   color: inherit;
@@ -274,8 +287,20 @@ h2 {
   cursor: pointer;
 }
 
+.page-description::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/banner.png");
+  background-position: center;
+  background-size: cover;
+  content: "";
+}
+
 @media (width <= 414px) {
-  .page-description {
+  .page-description .content {
     margin-top: 250px;
   }
 }
