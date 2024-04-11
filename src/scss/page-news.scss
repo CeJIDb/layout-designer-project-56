@@ -6,6 +6,10 @@
   .content {
     @include flex(column, flex-start, center);
   }
+  
+  h2 {
+    margin-bottom: 48px;
+  }
 
   .news-item {
     @include flex(row, flex-start);
