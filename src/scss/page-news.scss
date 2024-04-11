@@ -26,11 +26,6 @@
       margin-top: 0;
     }
 
-    .news-img {
-      display: block;
-      height: auto;
-    }
-
     .news-footer {
       font-size: 12px;
     }
@@ -57,10 +52,6 @@
   .page-news {
     .news-item {
       flex-wrap: wrap;
-
-      .news-img {
-          width: 100%;
-      }
     }
   }
 }
