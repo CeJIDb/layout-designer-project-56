@@ -10,13 +10,13 @@
   }
 
   h2 {
-    margin-bottom: 50px;
+    margin-bottom: 48px;
   }
 
   .pricing-container {
     @include flex(row, space-between, center);
     flex-wrap: wrap;
-    row-gap: 50px;
+    row-gap: 48px;
 
     width: 100%;
   }
