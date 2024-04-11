@@ -28,6 +28,8 @@ body {
 }
 
 main {
+  @include flex(column, flex-start, center);
+
   width: 100%;
 }
 
@@ -90,6 +92,8 @@ h4 {
 }
 
 .content {
+  @include flex(column, flex-start, center);
+  
   width: 1200px;
 
   @include test-border;

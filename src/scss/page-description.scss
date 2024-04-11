@@ -6,8 +6,6 @@
   background-image: url('../images/banner.png');
 
   .content {
-    @include flex(column, flex-start, center);
-
     margin: 200px 0;
   
     text-align: center;

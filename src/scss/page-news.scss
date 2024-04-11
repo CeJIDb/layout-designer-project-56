@@ -1,11 +1,5 @@
 .page-news {
-  @include flex(column, flex-start, center);
-
   padding-top: 100px;
-
-  .content {
-    @include flex(column, flex-start, center);
-  }
   
   h2 {
     margin-bottom: 48px;
