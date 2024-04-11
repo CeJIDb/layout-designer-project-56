@@ -1,0 +1,53 @@
+.page-app {
+  @include flex(column, flex-start, center);
+
+  padding-top: 100px;
+  margin-bottom: 100px;
+
+  .content {
+    @include flex(column, flex-start, center);
+  }
+
+  h2 {
+    margin-bottom: 48px;
+  }
+
+  .app {
+    @include flex(row-reverse, space-between);
+    flex-wrap: wrap;
+
+    &-img,
+    &-description {
+      width: 50%;
+    }
+
+    &-img {
+      img {
+        margin: 0 auto;
+      }
+    }
+
+    .download-btn {
+      width: 131px;
+      padding: 16px 40px;
+
+      text-transform: capitalize;
+
+      border: none;
+      border-radius: 32px;
+
+      background-color: $red;
+    }
+  }
+}
+
+@media (width <= 414px) {
+  .page-app {
+    .app {
+      &-img,
+      &-description {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -101,6 +101,7 @@ h4 {
 
 .content {
   width: 1200px;
+  box-sizing: border-box;
   border: 1px solid red;
 }
 
@@ -132,6 +133,10 @@ h4 {
   width: 1px;
 }
 
+.flex-img {
+  display: block;
+}
+
 @media (width <= 414px) {
   h1 {
     font-size: 30px;
@@ -153,6 +158,10 @@ h4 {
     box-sizing: border-box;
     width: 100%;
     padding: 0 20px;
+  }
+  .flex-img {
+    width: 100%;
+    height: auto;
   }
 }
 .header {
@@ -319,7 +328,7 @@ h4 {
   text-align: center;
 }
 .page-pricing h2 {
-  margin-bottom: 50px;
+  margin-bottom: 48px;
 }
 .page-pricing .pricing-container {
   display: flex;
@@ -327,7 +336,7 @@ h4 {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  row-gap: 50px;
+  row-gap: 48px;
   width: 100%;
 }
 .page-pricing .pricing-item {
@@ -382,6 +391,9 @@ h4 {
   justify-content: flex-start;
   align-items: center;
 }
+.page-news h2 {
+  margin-bottom: 48px;
+}
 .page-news .news-item {
   display: flex;
   flex-direction: row;
@@ -399,10 +411,6 @@ h4 {
 }
 .page-news .news-item h3 {
   margin-top: 0;
-}
-.page-news .news-item .news-img {
-  display: block;
-  height: auto;
 }
 .page-news .news-item .news-footer {
   font-size: 12px;
@@ -427,7 +435,48 @@ h4 {
   .page-news .news-item {
     flex-wrap: wrap;
   }
-  .page-news .news-item .news-img {
+}
+.page-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 100px;
+  margin-bottom: 100px;
+}
+.page-app .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.page-app h2 {
+  margin-bottom: 48px;
+}
+.page-app .app {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.page-app .app-img, .page-app .app-description {
+  width: 50%;
+}
+.page-app .app-img img {
+  margin: 0 auto;
+}
+.page-app .app .download-btn {
+  width: 131px;
+  padding: 16px 40px;
+  text-transform: capitalize;
+  border: none;
+  border-radius: 32px;
+  background-color: #95390c;
+}
+
+@media (width <= 414px) {
+  .page-app .app-img, .page-app .app-description {
     width: 100%;
   }
 }
