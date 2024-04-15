@@ -2,8 +2,8 @@
 @import "mixins";
 @import "general";
 @import "header";
-@import "page-description";
-@import "page-pricing";
-@import "page-news";
-@import "page-app";
+@import "./index/page-description.scss";
+@import "./index/page-pricing";
+@import "./index/page-news";
+@import "./index/page-app";
 @import "footer";
