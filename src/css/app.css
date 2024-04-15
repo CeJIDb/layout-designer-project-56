@@ -571,6 +571,7 @@ footer a {
   padding: 20px 30px;
   font-family: inherit;
   font-size: 12.8px;
+  text-transform: uppercase;
   border: none;
 }
 .artist-description .action-buttons .btn img {
@@ -591,6 +592,38 @@ footer a {
   .artist-description .content {
     margin: 225px 0;
   }
+}
+.artist-popular-track .content {
+  align-items: flex-start;
+  text-align: left;
+}
+.artist-popular-track .popular-track-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 55px);
+  column-gap: 50px;
+  row-gap: 25px;
+  width: 100%;
+}
+.artist-popular-track .popular-track-container .popular-track {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+.artist-popular-track .popular-track-container .popular-track .track-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 1 0;
+}
+.artist-popular-track .popular-track-container .popular-track p {
+  margin: 0;
+  padding: 0;
 }
 
 /*# sourceMappingURL=app.css.map */
