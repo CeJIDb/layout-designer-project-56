@@ -8,6 +8,49 @@
   <link rel="stylesheet" href="./css/app.css">
 </head>
 <body>
-  
+  <header class="header">
+    <nav class="content">
+      <ul class="navigation-panel">
+        <li>
+          <a class="logo" href="#">
+            <img class="logo-img" width="24" height="24" src="./images/logo.svg" alt="Логотип">
+            MUSIC BOX
+          </a>
+        </li>
+        <li>
+          <ul class="navigation-menu">
+            <li><a href="">главная</a></li>
+            <li><a href="">каталог</a></li>
+            <li><a href="">исполнители</a></li>
+            <li><a href="">контакты</a></li>
+          </ul>
+        </li>
+        <li class="search-form">
+          <form action="#">
+            <label for="search" class="sr-only">Поиск</label>
+            <input id="search" class="search" type="text" placeholder="ПОИСК...">
+          </form>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="page-description artist-description bg bg-artist">
+      <div id="page-description" class="content">
+        <h1>Morten Harket</h1>
+        <p class="text-size-1">24 875 поклонников</p>
+        <div class="action-buttons">
+          <button class="btn mix-btn">
+            <img height="20" width="20" src="./images/play-button.svg" alt="Микс">
+            МИКС
+          </button>
+          <button class="btn to-favorites-btn">
+            <img height="20" width="20" src="./images/heart.svg" alt="В избранное">
+            В ИЗБРАННОЕ
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
