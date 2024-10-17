@@ -7,6 +7,7 @@
   text-align: center;
 
   h2 {
+    @include mixins.reset;
     margin-bottom: 48px;
   }
 
