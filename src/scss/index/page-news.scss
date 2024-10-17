@@ -1,9 +1,10 @@
 @use "../mixins";
 
 .page-news {
-  padding-top: 100px;
+  padding-top: 83px;
 
   h2 {
+    margin-top: 0;
     margin-bottom: 48px;
   }
 
@@ -14,16 +15,25 @@
     width: 100%;
     margin-bottom: 65px;
 
+    .text-size-1 {
+      margin-bottom: 23px;
+    }
+
     &:nth-of-type(2n) {
       flex-direction: row-reverse;
     }
 
     &:last-of-type {
       margin-bottom: 0;
+
+      .text-size-1 {
+        margin-bottom: 15px;
+      }
     }
 
     h3 {
       margin-top: 0;
+      font-size: 30px;
     }
 
     .news-footer {
@@ -36,7 +46,13 @@
 
       margin-bottom: 48px;
 
+      p {
+        @include mixins.reset;
+        line-height: 1.6;
+      }
+
       .author-name {
+        margin-right: 5px;
         color: #f89202;
       }
     }

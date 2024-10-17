@@ -74,7 +74,7 @@ h4 {
     &-size-#{$i} {
       font-size: list.nth($fz-list, $i);
 
-      line-height: 1.5em;
+      line-height: 1.5;
     }
   }
 }
@@ -126,6 +126,14 @@ h4 {
 
 .flex-img {
   display: block;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.mb-23 {
+  margin-bottom: 23px;
 }
 
 @media (width <= 414px) {
