@@ -1,4 +1,4 @@
-@use 'sass:color';
+@use "sass:color";
 @use "../mixins";
 @use "../variables";
 
@@ -8,6 +8,7 @@
   width: 100%;
 
   .content {
+    margin: 200px 0;
     align-items: flex-start;
 
     text-align: left;
@@ -32,10 +33,6 @@
       text-transform: uppercase;
 
       border: none;
-
-      // img {
-      //   color: invert($color, $weight: 100%, $space: null)
-      // }
     }
 
     .mix-btn {
