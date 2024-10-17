@@ -18,7 +18,7 @@
     @include mixins.reset;
   }
 
-  h2 {
+  h2, p {
     margin-top: 0;
   }
 
@@ -52,7 +52,7 @@
 
     .submit-btn {
       width: 100%;
-      padding: 20px 30px;
+      padding: 21px 30px;
 
       font-size: 13.3px;
 
