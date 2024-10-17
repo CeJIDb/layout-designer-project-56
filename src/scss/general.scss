@@ -1,34 +1,26 @@
-@font-face {
-  font-weight: normal;
-  font-family: Roboto;
-  src: url("../fonts/Roboto-Regular.ttf");
-}
-
-@font-face {
-  font-weight: bold;
-  font-family: Roboto;
-  src: url("../fonts/Roboto-Bold.ttf");
-}
+@use "sass:list";
+@use "mixins";
+@use "variables";
 
 html {
   font-family: Roboto, sans-serif;
   line-height: 1.5;
-  color: $dark-gray;
+  color: variables.$dark-gray;
 
   background-color: #08020d;
 }
 
 body {
-  @include flex(column, flex-start, center);
-  @include reset;
+  @include mixins.flex(column, flex-start, center);
+  @include mixins.reset;
 
   width: 100vw;
 
-  background-color: $black;
+  background-color: variables.$black;
 }
 
 main {
-  @include flex(column, flex-start, center);
+  @include mixins.flex(column, flex-start, center);
 
   width: 100%;
 }
@@ -38,7 +30,7 @@ h2,
 h3,
 h4 {
   font-weight: bold;
-  color: $white;
+  color: variables.$white;
   text-transform: uppercase;
 }
 
@@ -80,7 +72,7 @@ h4 {
 
   @for $i from 1 through 7 {
     &-size-#{$i} {
-      font-size: nth($fz-list, $i);
+      font-size: list.nth($fz-list, $i);
     }
   }
 }
@@ -92,11 +84,11 @@ h4 {
 }
 
 .content {
-  @include flex(column, flex-start, center);
-  
+  @include mixins.flex(column, flex-start, center);
+
   width: 1200px;
 
-  @include test-border;
+  @include mixins.test-border;
 }
 
 .bg {
@@ -108,13 +100,13 @@ h4 {
   box-sizing: border-box;
   display: block;
   padding: 20px 30px;
-  
+
   color: inherit;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
 
-  border: 1px solid $white;
+  border: 1px solid variables.$white;
   border-radius: 5px;
 
   cursor: pointer;

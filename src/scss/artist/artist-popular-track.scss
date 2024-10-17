@@ -1,3 +1,5 @@
+@use "../mixins";
+
 .artist-popular-track {
   .content {
     align-items: flex-start;
@@ -9,24 +11,23 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 55px);
-    column-gap: 50px;
-    row-gap: 25px;
+    gap: 25px 50px;
 
     width: 100%;
 
     .popular-track {
-      @include flex(row, flex-start, center);
+      @include mixins.flex(row, flex-start, center);
       gap: 15px;
       
-      @include test-border;
+      @include mixins.test-border;
 
       .track-info {
-        @include flex(row, space-between, center);
+        @include mixins.flex(row, space-between, center);
         flex: 1 1 0;
       }
 
       p {
-        @include reset;
+        @include mixins.reset;
       }
     }
   }

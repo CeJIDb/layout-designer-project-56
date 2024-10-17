@@ -1,6 +1,10 @@
+@use 'sass:color';
+@use "../mixins";
+@use "../variables";
+
 .artist-description {
-  @include flex(column, flex-start, center);
-  
+  @include mixins.flex(column, flex-start, center);
+
   width: 100%;
 
   .content {
@@ -10,14 +14,14 @@
   }
 
   .action-buttons {
-    @include flex(row, flex-start, center);
+    @include mixins.flex(row, flex-start, center);
     gap: 1.5rem;
     flex-wrap: wrap;
 
     margin-top: 48px;
 
     .btn {
-      @include flex(row, flex-start, center);
+      @include mixins.flex(row, flex-start, center);
       gap: 16px;
 
       width: 200px;
@@ -29,24 +33,23 @@
 
       border: none;
 
-       img {
-        filter: invert(1);
-       }
+      // img {
+      //   color: invert($color, $weight: 100%, $space: null)
+      // }
     }
 
     .mix-btn {
-      background-color: $purple;
+      background-color: variables.$purple;
     }
 
     .to-favorites-btn {
-      background-color: $red;
+      background-color: variables.$red;
     }
   }
-
 }
 
 .bg-artist {
-  background-image: url('../images/Morten Harket.png');
+  background-image: url("../../assets/images/Morten\ Harket.png");
 }
 
 @media (width <= 414px) {

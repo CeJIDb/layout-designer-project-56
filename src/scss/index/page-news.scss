@@ -1,12 +1,14 @@
+@use "../mixins";
+
 .page-news {
   padding-top: 100px;
-  
+
   h2 {
     margin-bottom: 48px;
   }
 
   .news-item {
-    @include flex(row, flex-start);
+    @include mixins.flex(row, flex-start);
     gap: 50px;
 
     width: 100%;
@@ -29,13 +31,13 @@
     }
 
     .news-author {
-      @include flex(row, flex-start, center);
+      @include mixins.flex(row, flex-start, center);
       gap: 16px;
 
       margin-bottom: 48px;
 
       .author-name {
-        color: #F89202;
+        color: #f89202;
       }
     }
 

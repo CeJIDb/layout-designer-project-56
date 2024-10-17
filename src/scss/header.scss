@@ -1,9 +1,12 @@
+@use "mixins";
+@use "variables";
+
 .header {
   width: 100vw;
 
-  color: $white;
+  color: variables.$white;
 
-  @include flex(column, flex-start, center);
+  @include mixins.flex(column, flex-start, center);
 
   .content {
     position: relative;
@@ -15,17 +18,17 @@
     left: 0;
     right: 0;
 
-    @include flex(row, flex-start, center);
+    @include mixins.flex(row, flex-start, center);
   }
 
   ul {
-    @include reset;
+    @include mixins.reset;
 
     list-style: none;
   }
 
   .logo {
-    @include flex(row, flex-start, center);
+    @include mixins.flex(row, flex-start, center);
     margin-right: 90px;
   }
 
@@ -44,14 +47,14 @@
   }
 
   .navigation-menu {
-    @include flex(row, flex-start);
-    
+    @include mixins.flex(row, flex-start);
+
     flex-wrap: wrap;
     gap: 24px;
   }
 
   .search-form {
-    @include flex(row, flex-end);
+    @include mixins.flex(row, flex-end);
 
     flex: 1 0 0;
   }
@@ -66,7 +69,7 @@
 
     border: none;
     border-radius: 50px;
-    background-color: $dark;
+    background-color: variables.$dark;
   }
 }
 

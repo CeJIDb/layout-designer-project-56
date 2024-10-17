@@ -1,3 +1,6 @@
+@use "mixins";
+@use "variables";
+
 footer {
   width: 100%;
 
@@ -7,7 +10,7 @@ footer {
   .bottom {
     position: relative;
 
-    @include flex(column, flex-start, center);
+    @include mixins.flex(column, flex-start, center);
 
     width: 100%;
   }
@@ -17,15 +20,15 @@ footer {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       align-items: start;
-  
+
       padding-top: 3rem;
       padding-bottom: 3rem;
-  
+
       .subscribe {
         li {
           display: inline-block;
           margin-right: 24px;
-  
+
           vertical-align: middle;
 
           &:last-of-type {
@@ -40,32 +43,18 @@ footer {
       left: 0;
       right: 0;
       bottom: 0;
-  
+
       box-sizing: border-box;
       height: 2px;
-  
-      background-color: $dark-gray;
-  
+
+      background-color: variables.$dark-gray;
+
       content: "";
     }
   }
 
-  .bottom {
-    padding-top:  2rem;
-    padding-bottom: 2rem;
-
-    .content {
-      align-items: flex-start;
-
-      ul {
-        @include flex(row, flex-start, center);
-        gap: 16px;
-      }
-    }
-  }
-
   ul {
-    @include reset;
+    @include mixins.reset;
 
     list-style: none;
 
@@ -74,8 +63,22 @@ footer {
     }
   }
 
+  .bottom {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    .content {
+      align-items: flex-start;
+
+      ul {
+        @include mixins.flex(row, flex-start, center);
+        gap: 16px;
+      }
+    }
+  }
+
   a {
-    color: $gray;
+    color: variables.$gray;
     text-decoration: none;
   }
 }
@@ -84,7 +87,7 @@ footer {
   footer {
     .top {
       .content {
-        @include flex(column);
+        @include mixins.flex(column);
         gap: 30px;
 
         h4 {
@@ -96,7 +99,7 @@ footer {
     .bottom {
       .content {
         ul {
-          @include flex(column);
+          @include mixins.flex(column);
         }
       }
     }

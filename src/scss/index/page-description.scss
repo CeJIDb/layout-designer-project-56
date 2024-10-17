@@ -1,67 +1,70 @@
+@use "../mixins";
+@use "../variables";
+
 .page-description {
-  @include flex(column, flex-start, center);
-  
+  @include mixins.flex(column, flex-start, center);
+
   width: 100%;
 
-  color: $white;
+  color: variables.$white;
 
   .content {
     margin: 200px 0;
-  
+
     text-align: center;
   }
 
   h1 {
-    @include reset;
+    @include mixins.reset;
   }
-  
+
   h2 {
     margin-top: 0;
   }
-  
+
   .access-form {
-    @include flex(row, space-between, center);
+    @include mixins.flex(row, space-between, center);
     flex-wrap: wrap;
     flex: 1 1 0;
     column-gap: 24px;
-  
+
     max-width: 570px;
-  
+
     input {
       flex: 1 1 270px;
-  
+
       box-sizing: border-box;
-  
+
       min-height: 50px;
       padding-left: 20px;
       margin-bottom: 1.5rem;
-  
+
       color: inherit;
       border-radius: 3px;
-      border: 2px solid $dark-gray;
-  
+      border: 2px solid variables.$dark-gray;
+
       background-color: transparent;
     }
-  
+
     input::placeholder {
       color: inherit;
     }
-  
+
     .submit-btn {
       width: 100%;
       padding: 20px 30px;
 
       font-size: 13.3px;
 
-      color: $white;
+      color: variables.$white;
       border: none;
-      background-color: $green;
+      background-color: variables.$green;
     }
   }
 }
 
 .banner-bg {
-  background-image: url('../images/banner.png');
+  background-image: url("../../assets/images/banner.png");
 }
 
 @media (width <= 414px) {
