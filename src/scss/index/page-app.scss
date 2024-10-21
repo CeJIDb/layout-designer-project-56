@@ -41,9 +41,16 @@
 @media (width <= 414px) {
   .page-app {
     .app {
-      &-img,
+      justify-content: center;
+
       &-description {
         width: 100%;
+      }
+
+      &-img {
+        img {
+          margin-left: 0;
+        }
       }
     }
   }
