@@ -15,14 +15,28 @@ footer {
     width: 100%;
   }
 
+  ul {
+    @include mixins.reset;
+    list-style: none;
+  }
+
   .top {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
     .content {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
+      column-gap: 40px;
       align-items: start;
 
-      padding-top: 3rem;
-      padding-bottom: 3rem;
+      ul {
+        margin: 1rem 0 26px;
+    
+        h4 {
+          margin: 0 0 1rem;
+        }
+      }
 
       .subscribe {
         li {
@@ -53,16 +67,6 @@ footer {
     }
   }
 
-  ul {
-    @include mixins.reset;
-
-    list-style: none;
-
-    h4 {
-      margin-bottom: 1rem;
-    }
-  }
-
   .bottom {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -73,6 +77,8 @@ footer {
       ul {
         @include mixins.flex(row, flex-start, center);
         gap: 16px;
+
+        margin-top: 8px;
       }
     }
   }
