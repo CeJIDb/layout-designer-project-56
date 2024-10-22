@@ -1,25 +1,36 @@
 @use "../mixins";
 
 .artist-popular-track {
+  @include mixins.flex(column, flex-start, center);
+
+  width: 100%;
+
   .content {
+    padding-top: 100px;
     align-items: flex-start;
 
     text-align: left;
   }
 
+  h2 {
+    @include mixins.reset;
+  }
+
   .popular-track-container {
+    margin-top: 3rem;
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 55px);
-    gap: 25px 50px;
+    row-gap: 25px;
 
     width: 100%;
 
     .popular-track {
+      max-width: 551px;
+
       @include mixins.flex(row, flex-start, center);
       gap: 15px;
-      
-      @include mixins.test-border;
 
       .track-info {
         @include mixins.flex(row, space-between, center);
@@ -29,6 +40,14 @@
       p {
         @include mixins.reset;
       }
+    }
+  }
+}
+
+@media (width <= 414px) {
+  .artist-popular-track {
+    .popular-track-container {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }
