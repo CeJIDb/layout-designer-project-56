@@ -6,6 +6,11 @@ footer {
 
   background: linear-gradient(89.75deg, #5328a1 32.83%, #95390c 81.56%);
 
+  a {
+    color: variables.$gray;
+    text-decoration: none;
+  }
+
   .top,
   .bottom {
     position: relative;
@@ -21,8 +26,8 @@ footer {
   }
 
   .top {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 62px;
+    padding-bottom: 75px;
 
     .content {
       display: grid;
@@ -31,22 +36,24 @@ footer {
       align-items: start;
 
       ul {
-        margin: 1rem 0 26px;
-    
         h4 {
-          margin: 0 0 1rem;
+          margin: 0 0 15px;
         }
       }
 
       .subscribe {
         li {
           display: inline-block;
-          margin-right: 24px;
+          margin-right: 21px;
 
           vertical-align: middle;
 
           &:last-of-type {
             margin-right: 0;
+          }
+
+          a {
+            display: flex;
           }
         }
       }
@@ -68,8 +75,8 @@ footer {
   }
 
   .bottom {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 38px;
+    padding-bottom: 49px;
 
     .content {
       align-items: flex-start;
@@ -77,27 +84,27 @@ footer {
       ul {
         @include mixins.flex(row, flex-start, center);
         gap: 16px;
-
-        margin-top: 8px;
       }
     }
-  }
-
-  a {
-    color: variables.$gray;
-    text-decoration: none;
   }
 }
 
 @media (width <= 414px) {
   footer {
     .top {
+      padding-top: 67px;
+      padding-bottom: 76px;
+
       .content {
         @include mixins.flex(column);
-        gap: 30px;
+        gap: 34px;
 
-        h4 {
-          margin-top: 0;
+        ul {
+          margin: 0;
+
+          h4 {
+            margin-top: 0;
+          }
         }
       }
     }
