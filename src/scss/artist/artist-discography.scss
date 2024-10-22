@@ -1,0 +1,62 @@
+@use "../mixins";
+
+.artist-discography {
+  @include mixins.flex(column, flex-start, center);
+
+  width: 100%;
+
+  .content {
+    padding-top: 100px;
+    
+    text-align: left;
+  }
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 3rem;
+    width: 100%;
+  }
+
+  .dicography-container {
+    @include mixins.flex(row, flex-start);
+    flex-wrap: wrap;
+    gap: 25px 50px;
+
+    .discography-item {
+      max-width: 250px;
+
+      @include mixins.flex(column, flex-start);
+      gap: 18px;
+
+      .cover {
+        max-width: 250px;
+        max-height: 250px;
+      }
+
+      .discography-info {
+        .name, .year {
+          @include mixins.reset;
+        }
+      }
+    }
+  }
+}
+
+@media (width <= 414px) {
+  .artist-discography {
+    .dicography-container {
+      .discography-item {
+        max-width: 138px;
+
+        .cover {
+          max-width: 137px;
+          max-height: 137px;
+        }
+
+        .name {
+          line-height: 27px;
+        }
+      }
+    }
+  }
+}
