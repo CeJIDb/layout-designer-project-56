@@ -541,7 +541,8 @@ footer .top .content {
   column-gap: 40px;
   align-items: start;
 }
-footer .top .content ul h4 {
+footer .top .content h4 {
+  width: 100%;
   margin: 0 0 15px;
 }
 footer .top .content .subscribe li {
